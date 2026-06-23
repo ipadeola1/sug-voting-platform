@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUG Award Night Voting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">SUG <span>Awards</span></div>
+    <div class="navlinks">
+      <a href="index.html" class="tab active">Home</a>
+      <a href="vote.html" class="tab">Vote Now</a>
+      <a href="leaderboard.html" class="tab">Leaderboard</a>
+      <a href="admin.html" class="tab">Admin</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="badge">Voting is open</div>
+    <h1>SUG Dinner & Award Night Voting Platform</h1>
+    <p>Support your favourite nominees and help them win recognition. The public home page opens first, and admin login is only shown on the Admin page.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="section card stats">
+      <div class="stat"><div class="num" id="homeVotes">48,320</div><div class="lbl">Total Votes</div></div>
+      <div class="stat"><div class="num" id="homeNominees">0</div><div class="lbl">Nominees</div></div>
+      <div class="stat"><div class="num" id="homeCats">0</div><div class="lbl">Categories</div></div>
+    </section>
+
+    <section class="section card content">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>Choose a category.</li>
+        <li>Select a nominee.</li>
+        <li>Enter vote count.</li>
+        <li>Proceed to payment.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">Powered by the Student Union Government</footer>
+
+  <script src="script.js"></script>
+  <script>
+    setActivePage("home");
+    updateHomeStats();
+  </script>
+</body>
+</html>
