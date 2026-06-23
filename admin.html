@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - SUG Awards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">SUG <span>Awards</span></div>
+    <div class="navlinks">
+      <a href="index.html" class="tab">Home</a>
+      <a href="vote.html" class="tab">Vote Now</a>
+      <a href="leaderboard.html" class="tab">Leaderboard</a>
+      <a href="admin.html" class="tab active">Admin</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <h1 class="page-title">Admin Panel</h1>
+
+    <section class="card loginbox" id="adminLoginBox">
+      <h2>Admin Login</h2>
+      <p class="muted">This screen appears only when you open the Admin page.</p>
+      <div class="form-group"><label class="label">Username</label><input class="input" id="adminUser" value="admin"></div>
+      <div class="form-group"><label class="label">Password</label><input class="input" id="adminPass" type="password" value="admin123"></div>
+      <button class="primary" id="loginBtn">Sign In</button>
+      <div id="loginMsg" class="muted" style="margin-top:12px"></div>
+    </section>
+
+    <section id="adminPanel" class="hidden">
+      <div class="section card stats">
+        <div class="stat"><div class="num" id="admVotes">0</div><div class="lbl">Total Votes</div></div>
+        <div class="stat"><div class="num" id="admNominees">0</div><div class="lbl">Nominees</div></div>
+        <div class="stat"><div class="num" id="admCats">0</div><div class="lbl">Categories</div></div>
+      </div>
+
+      <section class="section card content">
+        <h2>Nominees</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Name</th><th>Category</th><th>Votes</th></tr></thead>
+            <tbody id="adminNominees"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <button class="secondary" id="logoutBtn">Logout</button>
+    </section>
+  </main>
+
+  <footer class="footer">Powered by the Student Union Government</footer>
+
+  <script src="script.js"></script>
+  <script>
+    setActivePage("admin");
+    initAdminPage();
+  </script>
+</body>
+</html>
